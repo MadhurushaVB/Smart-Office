@@ -7,16 +7,16 @@ import java.util.Scanner;
 public class SmartOffice {
     public static void main(String[] args) {
         OfficeConfiguration officeConfigurationObj = new OfficeConfiguration();
-        Scanner scanner= new Scanner(System.in);
+        Scanner scan= new Scanner(System.in);
 
         //configuration of office
-        configureOffice(officeConfigurationObj, scanner);
+        configureOffice(officeConfigurationObj, scan);
 
         //setting up the display menu
-        SmartOfficeMenu menu = new SmartOfficeMenu(officeConfigurationObj,scanner);
+        SmartOfficeMenu menu = new SmartOfficeMenu(officeConfigurationObj,scan);
         menu.displayMenu();
 
-        scanner.close();
+        scan.close();
 
         System.out.println("Thank you for using Smart Office");
     }
