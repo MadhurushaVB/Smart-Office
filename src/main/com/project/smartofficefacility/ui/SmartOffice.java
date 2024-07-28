@@ -25,7 +25,7 @@ public class SmartOffice {
         System.out.println("Enter the number of meeting rooms: ");
         int roomCount=scanner.nextInt();
         scanner.nextLine();
-        for(int i=1;i<=roomCount;i++){
+        for(int i=1; i<=roomCount; i++){
             System.out.print("Enter the maximum capacity for room "+i+": ");
             int capacity=scanner.nextInt();
             scanner.nextLine();
