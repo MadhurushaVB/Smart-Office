@@ -36,17 +36,21 @@ public class Room {
         }
     }
 
-    public void addOccupants(int occupants) {
+    public boolean addOccupants(int occupants) {
         if (occupants >= 0 && occupants <= capacity) {
             this.occupants = occupants;
             if (occupants >= 2) {
                 System.out.println("Room " + roomNumber + " is now occupied by " + occupants + " persons. AC and lights turned on.");
+                return true;
             } else {
                 System.out.println("Room " + roomNumber + " occupancy insufficient to mark as occupied.");
+                return false;
             }
         } else {
             System.out.println("Invalid number of occupants. Please enter a valid number.");
+            return false;
         }
+
     }
 
     public void checkStatus() {

@@ -42,24 +42,31 @@ public class OfficeConfiguration {
         }
     }
 
-    public void cancelBooking(int roomNumber) {
+    public boolean cancelBooking(int roomNumber) {
         Room room = rooms.get(roomNumber);
         if (room != null) {
             room.cancelBooking();
         }
+        return false;
     }
 
-    public void addOccupants(int roomNumber, int occupants) {
+    public boolean addOccupants(int roomNumber, int occupants) {
         Room room = rooms.get(roomNumber);
         if (room != null) {
-            room.addOccupants(occupants);
+            boolean occupant =room.addOccupants(occupants);
+            if (occupant) {
+                return true;
+            }
         }
+        return false;
     }
 
-    public void checkRoomStatus(int roomNumber) {
+    public String checkRoomStatus(int roomNumber) {
         Room room = rooms.get(roomNumber);
         if (room != null) {
             room.checkStatus();
         }
+
+        return null;
     }
 }
